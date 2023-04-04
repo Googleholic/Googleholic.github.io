@@ -1,0 +1,228 @@
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    background-color: rgb(31, 31, 70);
+    height: 100vh;
+    width: 100vw;
+    border-color: black;
+}
+
+#gridContainer > div {
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+.interactive {
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+}
+
+[data-status="hidden"] {
+    display: none;
+}
+
+#content {
+    grid-column: 4 / 6;
+    grid-row: 1 / 4;
+}
+
+#leftArrow {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    /* aspect-ratio: 1/1; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#leftArrow > span {
+    font-size: 100px;
+    transform: translate(25%, 0);
+    transition: 0.3s;
+}
+
+#leftArrow:hover > span {
+    transform: translate(0, 0);
+}
+
+#rightArrow {
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;
+    /* aspect-ratio: 1/1; */
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rightArrow > span {
+    font-size: 100px;
+    transform: translate(0, 0);
+    transition: 0.3s;
+}
+
+#rightArrow:hover > span {
+    transform: translate(25%, 0);
+}
+
+#gridContainer > div:hover {
+    background-color: rgb(151, 151, 179);
+}
+
+#i1[data-status="visible"] {
+    background-color: rgba(156, 179, 151, 0.678);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#i2[data-status="visible"] {
+    background-color: rgba(179, 168, 151, 0.678);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#i3[data-status="visible"]  {
+    background-color: rgba(169, 151, 179, 0.678);
+}
+
+/* FACE */
+
+.smileyface {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(230, 230, 110);
+    border-radius: 50%;
+    position: relative;
+}
+
+.smileyfaceeyes {
+    position: relative;
+    display: flex;
+    top: 120px;
+    justify-content: space-evenly;
+}
+
+.smileyfaceeyes .smileyfaceeye {
+    width: 130px;
+    height: 130px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    top: 20%;
+    /* transform: translate(0, -50%); */
+}
+
+.smileyfaceeyes .smileyfaceeye::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.smileyfacemouth {
+    width: 200px;
+    height: 100px;
+    background-color: bisque;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: translate(-50%, 0);
+    transition: 0.5s;
+}
+
+.smileyface:hover > .smileyfacemouth {
+    height: 150px;
+    width: 150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 100px;
+}
+
+/* CUBE */
+
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+  }
+  
+  .scene {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+  }
+  
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 6s infinite linear;
+    transform-origin: center;
+  }
+  
+  @keyframes rotateCube {
+    0% {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateX(360deg);
+    }
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.7);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .front {
+    transform: translateZ(50px);
+  }
+  
+  .back {
+    transform: translateZ(-50px) rotateY(180deg);
+  }
+  
+  .right {
+    transform: translateX(50px) rotateY(90deg);
+  }
+  
+  .left {
+    transform: translateX(-50px) rotateY(-90deg);
+  }
+  
+  .top {
+    transform: translateY(-50px) rotateX(90deg);
+  }
+  
+  .bottom {
+    transform: translateY(50px) rotateX(-90deg);
+  }

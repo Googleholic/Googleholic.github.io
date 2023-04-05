@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My First Web Page</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<title>My First Web Page</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
 
-    <script src="script.js"></script>
+		<script src="script.js"></script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <style>
-        .material-symbols-rounded {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48
-        }
-    </style>
+		<style>
+			.material-symbols-rounded {
+				font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="gridContainer">
+			<div class="interactive" id="i1" data-status="visible">
+				<div class="smileyface">
+					<div class="smileyfaceeyes">
+						<div class="smileyfaceeye"></div>
+						<div class="smileyfaceeye"></div>
+					</div>
 
-</head>
-<body>
-    <div id="gridContainer">
-        <div class="interactive" id="i1" data-status="visible">
-            <div class="smileyface">
-                <div class="smileyfaceeyes">
-                    <div class="smileyfaceeye"></div>
-                    <div class="smileyfaceeye"></div>
-                </div>
-                
-                <div class="smileyfacemouth"></div>
-            </div>
-        </div>
-        <div class="interactive" id="i2" data-status="hidden">
-            <div class="cube">
-                <div class="face front"></div>
-                <div class="face back"></div>
-                <div class="face right"></div>
-                <div class="face left"></div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-        </div>
-        <div class="interactive" id="i3" data-status="hidden">Image3</div>
-        <div class="interactive" id="i4" data-status="hidden">Image4</div>
-        <div class="interactive" id="i5" data-status="hidden">Image5</div>
-        <div class="interactive" id="i6" data-status="hidden">Image6</div>
-        <div class="interactive" id="i7" data-status="hidden">Image7</div>
-        <div class="interactive" id="i8" data-status="hidden">Image8</div>
+					<div class="smileyfacemouth"></div>
+				</div>
+			</div>
 
-        <div id="content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet
-            </p>
-        </div>
-        <div id="leftArrow" onClick="leftArrow()">
-            <span class="material-symbols-rounded">arrow_back_ios</span>
-        </div>
-        
-        <div id="rightArrow" onClick="rightArrow()">
-            <span class="material-symbols-rounded">arrow_forward_ios</span>
-        </div>
-    </div>
-</body>
+			<div class="interactive" id="i2" data-status="hidden">
+				<div class="cube">
+					<div class="face front"></div>
+					<div class="face back"></div>
+					<div class="face right"></div>
+					<div class="face left"></div>
+					<div class="face top"></div>
+					<div class="face bottom"></div>
+				</div>
+			</div>
+            
+			<div class="interactive" id="i3" data-status="hidden">Image3</div>
+			<div class="interactive" id="i4" data-status="hidden">Image4</div>
+			<div class="interactive" id="i5" data-status="hidden">Image5</div>
+			<div class="interactive" id="i6" data-status="hidden">Image6</div>
+			<div class="interactive" id="i7" data-status="hidden">Image7</div>
+			<div class="interactive" id="i8" data-status="hidden">Image8</div>
+
+			<div id="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet</p>
+			</div>
+			<div id="leftArrow" onClick="leftArrow()">
+				<span class="material-symbols-rounded">arrow_back_ios</span>
+			</div>
+
+			<div id="rightArrow" onClick="rightArrow()">
+				<span class="material-symbols-rounded">arrow_forward_ios</span>
+			</div>
+		</div>
+	</body>
 </html>
